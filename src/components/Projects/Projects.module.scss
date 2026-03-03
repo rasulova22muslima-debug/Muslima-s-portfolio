@@ -1,0 +1,150 @@
+.projects {
+  padding: 96px 16px;
+  background: #fdf1ff;
+
+  &__title {
+    font-family: "DM Sans", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--accent-1);
+    text-align: center;
+  }
+
+  &__text {
+    font-family: "DM Sans", sans-serif;
+    font-size: 18px;
+    color: var(--text-dim);
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.card {
+  background: var(--bg-card, #ffffff);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 2px solid rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+
+  // Эффекты при наведении на КАРТОЧКУ
+  &:hover {
+    transform: translateY(-5px);
+
+    // Обращаемся к картинке внутри при ховере на родителя
+    .card__image img {
+      transform: scale(1.1);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 197px;
+    overflow: hidden; // Важно, чтобы картинка не вылезала за края при увеличении
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease; // Плавность увеличения
+      display: block;
+    }
+  }
+
+  &__content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__name {
+    font-family: "DM Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 12px;
+  }
+
+  &__descr {
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-dim);
+    margin-bottom: 16px;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+    margin-top: auto;
+  }
+
+  .tag {
+    background: #F3E8FF;
+    color: var(--accent-1);
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .link, .github {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      border: 1px solid #E9D5FF;
+      border-radius: 12px;
+      color: var(--text-main); 
+      transition: all 0.3s ease;
+      background: #FFFFFF;
+
+      &:hover {
+        background: #F3E8FF;
+        color: var(--accent-1); 
+      }
+    }
+
+    .link {
+      padding: 0 10px;
+      height: 42px;
+      flex-grow: 1;
+      gap: 8px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .github {
+      width: 42px;
+      height: 42px;
+    }
+  }
+}
+
+// Адаптив
+@media (max-width: 1024px) {
+  .projects__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 650px) {
+  .projects__grid { grid-template-columns: 1fr; }
+}

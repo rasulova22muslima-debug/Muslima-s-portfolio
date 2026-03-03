@@ -1,0 +1,16 @@
+
+$custom-fonts: 
+  ("DMSans_18pt-Bold", 700, "DM Sans"),
+  ("DMSans_18pt-SemiBold", 600, "DM Sans"),
+  ("OpenSans-Medium", 500, "Open Sans"),
+  ("OpenSans-Regular", 400, "Open Sans");
+
+@each $file, $weight, $family in $custom-fonts {
+    @font-face {
+        font-family: "#{$family}";
+        src: url("../fonts/#{$file}.ttf") format("truetype");
+        font-weight: $weight;
+        font-style: normal;
+        font-display: swap;
+    }
+}

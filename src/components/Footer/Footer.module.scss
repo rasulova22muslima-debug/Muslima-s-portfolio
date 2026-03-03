@@ -1,0 +1,69 @@
+.footer {
+  padding: 48px 16px;
+  background: #fdf0ff; 
+  border-top: 1px solid #f3e8ff;
+  font-family: "Open Sans", sans-serif;
+
+  &__wrap {
+    max-width: 1100px; 
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)); 
+    gap: 32px; 
+
+  }
+
+  &_logo {
+    font-family: "DM Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent-1); 
+    margin-bottom: 16px;
+  }
+
+  &_desc {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-dim);
+  }
+
+  &_title {
+    font-family: "DM Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 16px;
+  }
+
+  &_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 8px;
+      
+      a, span {
+        font-size: 15px;
+        color: var(--text-dim);
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: var(--accent-1);
+        }
+      }
+    }
+  }
+}
+
+// Адаптив для мобильных устройств
+@media (max-width: 768px) {
+  .footer {
+    &__wrap {
+      // На мобилках колонки выстраиваются в ряд
+      grid-template-columns: 1fr; 
+      gap: 40px;
+    }
+  }
+}
