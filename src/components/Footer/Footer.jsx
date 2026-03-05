@@ -1,22 +1,25 @@
 import React from 'react';
 import style from './Footer.module.scss';
+import { useTranslation } from 'react-i18next';
 
 const Footer = ({ navItems, contactItems }) => {
+   const { t } = useTranslation();
+
   return (
     <footer className={style.footer}>
       <div className={style.footer__wrap}>
         
         {/* Колонка 1: Брендинг */}
         <div className={style.footer_brand}>
-          <h2 className={style.footer_logo}>Расулова Муслима</h2>
+          <h2 className={style.footer_logo}>{t("logo")}</h2>
           <p className={style.footer_desc}>
-            Frontend разработчик и UI/UX дизайнер, создающая красивые и функциональные веб-приложения.
+           {t("footerInfo")}
           </p>
         </div>
 
         {/* Колонка 2: Навигация */}
         <div className={style.footer_nav}>
-          <h3 className={style.footer_title}>Навигация</h3>
+          <h3 className={style.footer_title}>{t("navigation")}</h3>
           <ul className={style.footer_list}>
             {navItems.map((item, index) => (
               <li key={index} className={style.footer_item}>
@@ -30,7 +33,7 @@ const Footer = ({ navItems, contactItems }) => {
 
         {/* Колонка 3: Контакты */}
         <div className={style.footer_contacts}>
-          <h3 className={style.footer_title}>Контакты</h3>
+          <h3 className={style.footer_title}>{t("contacts")}</h3>
           <ul className={style.footer_list}>
             {contactItems.map((item) => (
               <li key={item.id} className={style.footer_item}>

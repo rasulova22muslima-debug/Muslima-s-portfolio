@@ -29,14 +29,17 @@
   }
 
   &_card {
-    background: rgba(255, 255, 255, 0.8); 
+    background: var(--bg-card2);
+    // Синхронизация с .aboutme__desc
+    border: 1px solid var(--border-color);
+    border-radius: 24px; // Было 20px
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); // Была слабая фиолетовая тень
+    
     backdrop-filter: blur(8px); 
-    border-radius: 20px;
-    border: 1px solid #f3e8ff;
     max-width: 854px;
     width: 100%;
     padding: 48px;
-    box-shadow: 0 4px 24px rgba(168, 85, 247, 0.05);
+    transition: border-color 0.3s ease;
 
     &_title {
       font-family: "DM Sans", sans-serif;
@@ -66,7 +69,7 @@
   &_icon {
     width: 52px;
     height: 52px;
-    background: #f5f3ff;
+    background: rgba(183, 86, 254, 0.1);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -94,6 +97,7 @@
     color: var(--text-dim);
     font-size: 14px;
     text-decoration: none;
+    transition: color 0.3s ease;
     
     &:hover {
       color: var(--accent-1);
@@ -102,7 +106,7 @@
 
   &_divider {
     height: 1px;
-    background: #f3f4f6;
+    background: var(--border-color);
     width: 100%;
   }
 
@@ -112,7 +116,8 @@
       font-family: "Open Sans", sans-serif;
       font-weight: 500; 
       font-size: 16px;
-      color: #2D1b3D;
+      // Исправлено: заменено с жесткого темного цвета на переменную темы
+      color: var(--text-main); 
       margin-bottom: 24px;
     }
 
@@ -126,17 +131,20 @@
   &_social_item {
     width: 44px;
     height: 44px;
-    border: 1px solid #e5e7eb;
+    border: 1px solid var(--border-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #4b5563;
+    // Исправлено: заменено на переменную темы
+    color: var(--text-dim); 
     transition: all 0.3s ease;
+    background: transparent;
 
     &:hover {
-      color: #a855f7;
-      background: #fdfaff;
+      color: var(--accent-1);
+      background: rgba(183, 86, 254, 0.1);
+      border-color: var(--accent-1);
       transform: translateY(-2px);
     }
   }

@@ -4,7 +4,8 @@
   top: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--bg-page);
+  border-bottom: 1px solid var(--border-color);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 
@@ -16,7 +17,9 @@
     &_logo {
       font-weight: 700;
       font-size: 22px;
-      color: var(--accent-1);
+      background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
       text-decoration: none;
     }
 
@@ -77,4 +80,7 @@
   border: none;
   font-size: 20px;
   cursor: pointer;
+}
+.sunIcon{
+  color: var(--accent-1);
 }

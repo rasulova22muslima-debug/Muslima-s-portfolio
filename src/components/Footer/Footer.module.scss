@@ -1,16 +1,20 @@
 .footer {
-  padding: 48px 16px;
-  background: #fdf0ff; 
-  border-top: 1px solid #f3e8ff;
+  padding: 48px 16px; // Немного увеличил отступ для "воздуха"
+  background: var(--bg-page2); // Уходим от розового фона к системному
+  border-top: 1px solid var(--border-color); // Линия теперь подстраивается под тему
   font-family: "Open Sans", sans-serif;
 
   &__wrap {
-    max-width: 1100px; 
+    max-width: 1200px; // Синхронизируем с контейнером остального сайта
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr)); 
-    gap: 32px; 
+ grid-template-columns: repeat(3, minmax(0, 1fr)); 
+    gap: 40px;
 
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      text-align: center; // На мобилках лучше центрировать
+    }
   }
 
   &_logo {
@@ -18,13 +22,19 @@
     font-size: 24px;
     font-weight: 700;
     color: var(--accent-1); 
-    margin-bottom: 16px;
+    margin-bottom: 20px;
+    display: block;
   }
 
   &_desc {
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 15px;
+    line-height: 1.7;
     color: var(--text-dim);
+    // max-width: 300px; // Чтобы текст не растягивался на всю ширину
+
+    @media (max-width: 768px) {
+      margin: 0 auto;
+    }
   }
 
   &_title {
@@ -32,7 +42,10 @@
     font-size: 18px;
     font-weight: 700;
     color: var(--text-main);
-    margin-bottom: 16px;
+    margin-bottom: 24px;
+    text-transform: uppercase; // Как в современных UI
+    letter-spacing: 1px;
+    font-size: 14px;
   }
 
   &_list {
@@ -41,13 +54,14 @@
     margin: 0;
 
     li {
-      margin-bottom: 8px;
+      margin-bottom: 12px;
       
       a, span {
         font-size: 15px;
         color: var(--text-dim);
         text-decoration: none;
-        transition: color 0.3s ease;
+        transition: all 0.3s ease;
+        display: inline-block;
 
         &:hover {
           color: var(--accent-1);
@@ -60,10 +74,14 @@
 // Адаптив для мобильных устройств
 @media (max-width: 768px) {
   .footer {
+    padding: 48px 16px;
+    
     &__wrap {
-      // На мобилках колонки выстраиваются в ряд
-      grid-template-columns: 1fr; 
-      gap: 40px;
+      gap: 32px;
+    }
+    
+    &_title {
+      margin-bottom: 16px;
     }
   }
 }

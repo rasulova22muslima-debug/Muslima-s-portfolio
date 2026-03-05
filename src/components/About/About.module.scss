@@ -1,22 +1,22 @@
-.about__wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: grid;
+.about {
     background: var(--bg-page);
 }
 
-.about__left_p {
-    margin-bottom: 8px;
-    color:#6B4A7D ;
-}
+// .about__left_p {
+//     margin-bottom: 8px;
+//     color: #6B4A7D;
+// }
 
-.about__left_h {
-    margin-bottom: 16px;
-    color:var(--accent-1) ;
-}
+// .about__left_h {
+//     font-size: 64px;
+//     background: var(--accent-gradient);
+//     -webkit-background-clip: text;
+//     -webkit-text-fill-color: transparent;
+//     margin-bottom: 16px;
 
-.about__left_p2 {
-    margin-bottom: 32px;
-     color:#6B4A7D ;
-}
+// }
+
+// .about__left_p2 {
+//     margin-bottom: 32px;
+//     color: #6B4A7D;
+// }

@@ -1,40 +1,79 @@
 @import './fonts.scss';
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    outline: none;
-    font-family: "", sans-serif;
+:root {
+  // Базовая темная тема (как на скриншотах)
+  --bg-page: #1a0b2e;    
+  --bg-page2:#28153b  ;  
+  --bg-card: #2a173b; 
+  --bg-card2:#231235;    
+  --text-main: #F3E8FF;     // Основной светлый текст
+  --text-dim: #A89AB5;      // Приглушенный текст
+  --accent-1: #D696FF;      // Светло-фиолетовый (неон)
+  --accent-2: #FF6B97;      // Розовый акцент
+  --accent-gradient: linear-gradient(135deg, #B756FE 0%, #FF4F7E 100%);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --header-bg: rgba(18, 11, 25, 0.85);
+  --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
-:root {
+// Если захотите оставить переключатель на светлую тему
+[data-theme='light'] {
   --bg-page: #fef8ff;
+  --bg-page2: #fdf1ff;
   --bg-card: #FFFFFF;
   --text-main: #2D2136;
   --text-dim: #8E7E9A;
   --accent-1: #B756FE;
   --accent-2: #FF4F7E;
-  --accent-gradient: linear-gradient(135deg, #B756FE, #FF4F7E);
-  --shadow-color: rgba(183, 86, 254, 0.2);
+  --border-color: rgba(0, 0, 0, 0.1);
+  --header-bg: rgba(255, 255, 255, 0.9);
 }
 
-.container{
-  max-width: 1430px;
-  width: 100%;
-  height: 100%;
-  padding: 0 15px;
-  margin: 0 auto;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  font-family: "DM Sans", "Open Sans", sans-serif; // Используйте шрифты из макета
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: var(--bg-page);
   color: var(--text-main);
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.6;
 }
 
-html {
-  scroll-behavior: smooth;
+.container {
+  max-width: 1200px; // Стандартная ширина для портфолио
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+// Общий стиль для кнопок как на макете
+.btn-primary {
+  background: var(--accent-gradient);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(183, 86, 254, 0.4);
+  }
 }

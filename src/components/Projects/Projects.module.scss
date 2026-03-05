@@ -1,6 +1,6 @@
 .projects {
   padding: 96px 16px;
-  background: #fdf1ff;
+  background: var(--bg-page2); 
 
   &__title {
     font-family: "DM Sans", sans-serif;
@@ -29,20 +29,20 @@
 }
 
 .card {
-  background: var(--bg-card, #ffffff);
+  background: var(--bg-card); 
   border-radius: 20px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  border: 2px solid rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  // Граница теперь зависит от темы
+  border: 1px solid var(--border-color); 
+  transition: transform 0.3s ease, border-color 0.3s ease;
 
-  // Эффекты при наведении на КАРТОЧКУ
   &:hover {
     transform: translateY(-5px);
+    border-color: var(--accent-1); // Свечение при наведении
 
-    // Обращаемся к картинке внутри при ховере на родителя
     .card__image img {
       transform: scale(1.1);
     }
@@ -51,13 +51,13 @@
   &__image {
     width: 100%;
     height: 197px;
-    overflow: hidden; // Важно, чтобы картинка не вылезала за края при увеличении
+    overflow: hidden;
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.5s ease; // Плавность увеличения
+      transition: transform 0.5s ease;
       display: block;
     }
   }
@@ -94,12 +94,14 @@
   }
 
   .tag {
-    background: #F3E8FF;
+    // Делаем теги полупрозрачными фиолетовыми
+    background: rgba(198, 125, 255, 0.1); 
     color: var(--accent-1);
     padding: 4px 12px;
     border-radius: 100px;
     font-size: 13px;
     font-weight: 500;
+    border: 1px solid rgba(198, 125, 255, 0.2);
   }
 
   &__footer {
@@ -112,15 +114,19 @@
       align-items: center;
       justify-content: center;
       text-decoration: none;
-      border: 1px solid #E9D5FF;
+      // Убираем #E9D5FF (светло-фиолетовый), используем переменную границы
+      border: 1px solid var(--border-color); 
       border-radius: 12px;
       color: var(--text-main); 
       transition: all 0.3s ease;
-      background: #FFFFFF;
+      // Прозрачный фон или фон карточки
+      background: rgba(255, 255, 255, 0.03); 
 
       &:hover {
-        background: #F3E8FF;
-        color: var(--accent-1); 
+        // При наведении используем градиент как в примере
+        background: var(--accent-gradient, #B756FE);
+        color: #FFFFFF; 
+        border-color: transparent;
       }
     }
 
@@ -140,7 +146,7 @@
   }
 }
 
-// Адаптив
+// Адаптив остается без изменений
 @media (max-width: 1024px) {
   .projects__grid { grid-template-columns: repeat(2, 1fr); }
 }

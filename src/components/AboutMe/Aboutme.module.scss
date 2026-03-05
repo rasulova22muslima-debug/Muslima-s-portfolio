@@ -1,6 +1,7 @@
 .aboutme {
   padding: 96px 16px;
-  background: #fdf1ff;
+  // Убираем #fdf1ff, используем переменную
+  background: var(--bg-page2); 
 
   @media (max-width: 768px) {
     padding: 60px 16px;
@@ -9,6 +10,7 @@
   &_title {
     font-size: 48px;
     font-weight: 700;
+    // Заголовок "Обо мне" будет розово-фиолетовым градиентом или акцентом
     color: var(--accent-1);
     margin-bottom: 64px;
     text-align: center;
@@ -21,12 +23,14 @@
 
   &__desc {
     padding: 48px;
-    background: var(--bg-card, #ffffff);
-    border-radius: 20px;
-    border: 2px solid rgba(0, 0, 0, 0.1);
+    background: var(--bg-card);
+    border-radius: 24px;
+    // Тонкая граница, которая в темной теме станет светлой и прозрачной
+    border: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
     gap: 32px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 
     @media (max-width: 768px) {
       padding: 24px;
@@ -38,7 +42,8 @@
       font-size: 18px;
       font-weight: 400;
       line-height: 1.6;
-      color: #6B4A7D;
+      // ВАЖНО: заменяем #6B4A7D на переменную приглушенного текста
+      color: var(--text-dim); 
       margin-bottom: 24px;
 
       @media (max-width: 480px) {
@@ -56,7 +61,7 @@
       gap: 24px;
       align-items: center;
       justify-content: center;
-      flex-wrap: wrap; // Чтобы кнопки переносились, если не влезают
+      flex-wrap: wrap;
 
       @media (max-width: 768px) {
         flex-direction: column;
@@ -69,8 +74,9 @@
 
   &__contact_item {
     padding: 12px 24px;
-    background: var(--bg-page, #ffffff);
-    border: 2px solid rgba(0, 0, 0, 0.1);
+    // Кнопки-контакты должны быть чуть светлее основного фона
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
     border-radius: 50px;
     font-family: "DM Sans", sans-serif;
     font-size: 16px;
@@ -83,8 +89,10 @@
     transition: all 0.3s ease;
 
     &:hover {
+      // При наведении делаем рамку яркой (неоновой)
       border-color: var(--accent-1);
-      background: #fdf1ff;
+      background: rgba(183, 86, 254, 0.1);
+      transform: translateY(-2px);
     }
 
     @media (max-width: 768px) {

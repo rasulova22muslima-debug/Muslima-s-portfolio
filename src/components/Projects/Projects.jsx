@@ -1,12 +1,14 @@
+import { useTranslation } from "react-i18next";
 import style from "./Projects.module.scss";
 import { Github, ExternalLink } from "lucide-react";
 
 const Projects = ({ projects = [] }) => {
+    const { t } = useTranslation();
   return (
     <section className={style.projects} id="projects">
       <div className={`${style.projects__wrap} container`}>
-        <h2 className={style.projects__title}>Мои проекты</h2>
-        <p className={style.projects__text}>Избранные работы из моего портфолио</p>
+        <h2 className={style.projects__title}>{t("myProjects")}</h2>
+        <p className={style.projects__text}>{t("projects-p")}</p>
 
         <div className={style.projects__grid}>
           {projects.map((project, index) => (
@@ -28,7 +30,7 @@ const Projects = ({ projects = [] }) => {
                 <div className={style.card__footer}>
                   <a href={project.link} className={style.link} target="_blank" rel="noreferrer">
                     <ExternalLink size={18} className={style.link__icon} />
-                    Посмотреть проект
+                  {t("projectbtn")}
                   </a>
 
                   <a href={project.github} className={style.github} target="_blank" rel="noreferrer">

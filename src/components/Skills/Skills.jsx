@@ -1,11 +1,13 @@
+import { useTranslation } from "react-i18next";
 import style from "./Skills.module.scss"
 
 const Skills = ({ items }) => {
+  const { t } = useTranslation();
   return (
     <section id="skills" className={style.skills}>
       <div className={`${style.skills__wrap} container`}>
-        <h1 className={style.skills__title}>Мои навыки</h1>
-        <p className={style.skills__text}>Технологии, с которыми я работаю</p>
+        <h1 className={style.skills__title}>{t("mySkills")}</h1>
+        <p className={style.skills__text}>{t("skills-p")}</p>
         
         <div className={style.skills__grid}>
           {items && items.map((category, index) => (

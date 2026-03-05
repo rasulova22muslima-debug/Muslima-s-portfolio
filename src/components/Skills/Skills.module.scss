@@ -1,7 +1,7 @@
 .skills {
     padding: 96px 16px;
     background: var(--bg-page);
-    font-family: "DM Sans", sans-serif; // или ваш системный шрифт
+    font-family: "DM Sans", sans-serif;
 
     &__wrap {
         max-width: 1200px;
@@ -25,17 +25,13 @@
 
     &__grid {
         display: grid;
-        // Создаем 3 колонки, которые занимают равное место
         grid-template-columns: repeat(3, 1fr);
         gap: 25px;
 
-
-        // Адаптация под планшеты (2 колонки)
         @media (max-width: 992px) {
             grid-template-columns: repeat(2, 1fr);
         }
 
-        // Адаптация под телефоны (1 колонка)
         @media (max-width: 600px) {
             grid-template-columns: 1fr;
         }
@@ -46,18 +42,25 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background: var(--bg-card);
-    border-radius: 20px;
-    padding: 24px;
+    background: var(--bg-card2);
+    border-radius: 24px; // Синхронизировано с .aboutme (было 20px)
+    padding: 24px; // Немного увеличили для соответствия стилю
     text-align: left;
-    border: 2px solid rgba(0, 0, 0, 0.1); // Едва заметная розовая рамка
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    transition: 0.3s;
+    
+    // БОРДЕР: используем переменную и 1px, как в других компонентах
+    border: 1px solid var(--border-color); 
+    
+    // ТЕНЬ: точно такая же, как в .aboutme__desc
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); 
+    
+    // Плавный переход для всех свойств (включая бордер при убирании мыши)
+    transition: 0.3s; 
     width: 100%;
 
     &:hover {
-        border: 2px solid #cdbcda;
-        box-shadow: 0 10px 30px rgba(209, 107, 165, 0.15);
+        transform: translateY(-3px); // Добавим легкий подъем для живости
+        border: 1px solid var(--accent-1); // Теперь бордер указан корректно
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
     }
 
     &__title {
@@ -77,11 +80,10 @@
     &__item {
         font-size: 16px;
         color: var(--text-main);
-        margin-bottom: 8px;
+        margin-bottom: 8px; // Немного увеличили расстояние
         display: flex;
         align-items: center;
 
-        // Розовая точка перед каждым навыком
         &::before {
             content: "•";
             color: var(--accent-1);
@@ -92,7 +94,6 @@
 
         &:last-child {
             margin-bottom: 0;
-
         }
     }
 }
