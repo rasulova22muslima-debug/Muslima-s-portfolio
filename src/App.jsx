@@ -14,7 +14,6 @@ import { useTranslation } from "react-i18next";
 const App = () => {
   const { t } = useTranslation();
 
-  // Навигация теперь использует ключи из JSON
   const navLinks = [
     { text: t("about"), href: '#about' },
     { text: t("skills"), href: '#skills' },
@@ -22,14 +21,12 @@ const App = () => {
     { text: t("contacts"), href: '#contacts' },
   ];
 
-  // Данные контактов (метки тоже можно перевести)
   const contacts = [
     { id: 1, icon: <Mail size={24} />, label: t("tel"), value: "rasulova22muslima@gmail.com", href: "mailto:rasulova22muslima@gmail.com" },
     { id: 2, icon: <Phone size={24} />, label: t("tel"), value: "+998 (91)-037-19-90", href: "tel:+998910371990" },
     { id: 3, icon: <MapPin size={24} />, label: t("loc"), value: t("loc2"), href: null },
   ];
 
-  // Навыки: заголовки и элементы переводим через ключи
   const mySkills = [
     { title: "Frontend", skills: ['React', 'TypeScript', 'JavaScript', 'CSS', 'SCSS'] },
     { title: 'Backend', skills: ['Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'REST API'] },
@@ -38,17 +35,17 @@ const App = () => {
     {
       title: 'Soft Skills',
       skills: [
-        t('skills-p1'), // Командная работа
-        t('skills-p2'), // Communication
-        t('skills-p3'), // Решение проблем
-        t('skills-p4'), // Тайм-менеджмент
-        t('skills-p5')  // Креативность
+        t('skills-p1'),
+        t('skills-p2'),
+        t('skills-p3'),
+        t('skills-p4'), 
+        t('skills-p5')  
       ]
     },
     { title: t('languages'), skills: [t('lang1'), t('lang2')] },
   ];
 
-  // Проекты: используем ключи project1, project2 и т.д.
+  
   const myProjects = [
     {
       title: "GoTrip",

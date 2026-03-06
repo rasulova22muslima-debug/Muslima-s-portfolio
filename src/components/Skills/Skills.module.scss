@@ -43,23 +43,20 @@
     flex-direction: column;
     gap: 20px;
     background: var(--bg-card2);
-    border-radius: 24px; // Синхронизировано с .aboutme (было 20px)
-    padding: 24px; // Немного увеличили для соответствия стилю
+    border-radius: 24px;
+    padding: 24px; 
     text-align: left;
     
-    // БОРДЕР: используем переменную и 1px, как в других компонентах
     border: 1px solid var(--border-color); 
     
-    // ТЕНЬ: точно такая же, как в .aboutme__desc
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); 
     
-    // Плавный переход для всех свойств (включая бордер при убирании мыши)
     transition: 0.3s; 
     width: 100%;
 
     &:hover {
-        transform: translateY(-3px); // Добавим легкий подъем для живости
-        border: 1px solid var(--accent-1); // Теперь бордер указан корректно
+        transform: translateY(-3px); 
+        border: 1px solid var(--accent-1); 
         box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
     }
 

@@ -8,16 +8,12 @@ const Footer = ({ navItems, contactItems }) => {
   return (
     <footer className={style.footer}>
       <div className={style.footer__wrap}>
-        
-        {/* Колонка 1: Брендинг */}
         <div className={style.footer_brand}>
           <h2 className={style.footer_logo}>{t("logo")}</h2>
           <p className={style.footer_desc}>
            {t("footerInfo")}
           </p>
         </div>
-
-        {/* Колонка 2: Навигация */}
         <div className={style.footer_nav}>
           <h3 className={style.footer_title}>{t("navigation")}</h3>
           <ul className={style.footer_list}>
@@ -30,8 +26,6 @@ const Footer = ({ navItems, contactItems }) => {
             ))}
           </ul>
         </div>
-
-        {/* Колонка 3: Контакты */}
         <div className={style.footer_contacts}>
           <h3 className={style.footer_title}>{t("contacts")}</h3>
           <ul className={style.footer_list}>
