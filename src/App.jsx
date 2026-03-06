@@ -31,9 +31,9 @@ const App = () => {
 
   // Навыки: заголовки и элементы переводим через ключи
   const mySkills = [
-    { title: "Frontend", skills: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'HTML5/CSS3'] },
+    { title: "Frontend", skills: ['React', 'TypeScript', 'JavaScript', 'CSS', 'SCSS'] },
     { title: 'Backend', skills: ['Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'REST API'] },
-    { title: t('tools'), skills: ['Git', 'Figma', 'Vite', 'VS Code', 'Webpack'] },
+    { title: t('tools'), skills: ['Git', 'Figma', 'Vite', 'VS Code', 'Versel'] },
     { title: t('design'), skills: ['UI/UX Design', 'Responsive Design', 'Adobe XD', 'Photoshop', 'Illustrator'] },
     {
       title: 'Soft Skills',

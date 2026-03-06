@@ -1,22 +1,104 @@
 .about {
+    padding: 96px 16px;
+    display: flex;
+    align-items: center;
     background: var(--bg-page);
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+
+        @media (max-width: 992px) {
+            flex-direction: column-reverse;
+            text-align: center;
+        }
+    }
+
+    &__right {
+        position: relative;
+        flex-shrink: 0;
+
+        img {
+            width: 450px; // Подбери нужный размер
+            height: 450px;
+            object-fit: cover;
+            border-radius: 50%;
+
+            // Эффект тени и легкого фиолетового свечения как на фото
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, 0.2),
+                0 0 30px rgba(188, 105, 255, 0.3);
+
+            @media (max-width: 1200px) {
+                width: 350px;
+                height: 350px;
+            }
+
+            @media (max-width: 576px) {
+                width: 280px;
+                height: 280px;
+            }
+        }
+
+        // Дополнительный мягкий блик сзади (как на макете)
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 110%;
+            height: 110%;
+            background: radial-gradient(circle, rgba(188, 105, 255, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+            z-index: -1;
+        }
+    }
+
+    // Стили для текста (для справки)
+    &__left {
+        &_h {
+            font-family: "DM Sans", sans-serif;
+            font-size: 64px;
+            font-weight: 700;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 16px;
+        }
+
+       &_btn {
+            padding: 12px 28px;
+            border-radius: 25px;
+            background: var(--accent-gradient);
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            transition: 0.3s;
+
+            a{
+                color: #fff;
+                
+            }
+        }
+    }
 }
 
-// .about__left_p {
-//     margin-bottom: 8px;
-//     color: #6B4A7D;
-// }
+.about__left_p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: var(--text-dim);
+}
 
-// .about__left_h {
-//     font-size: 64px;
-//     background: var(--accent-gradient);
-//     -webkit-background-clip: text;
-//     -webkit-text-fill-color: transparent;
-//     margin-bottom: 16px;
-
-// }
-
-// .about__left_p2 {
-//     margin-bottom: 32px;
-//     color: #6B4A7D;
-// }
+.about__left_p2 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 24px;
+    margin-bottom: 32px;
+       color: var(--text-dim);
+}
