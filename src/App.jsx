@@ -29,9 +29,9 @@ const App = () => {
 
   const mySkills = [
     { title: "Frontend", skills: ['React', 'TypeScript', 'JavaScript', 'CSS', 'SCSS'] },
-    { title: 'Backend', skills: ['Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'REST API'] },
+    { title: 'Backend', skills: ['Node.js',] },
     { title: t('tools'), skills: ['Git', 'Figma', 'Vite', 'VS Code', 'Versel'] },
-    { title: t('design'), skills: ['UI/UX Design', 'Responsive Design', 'Adobe XD', 'Photoshop', 'Illustrator'] },
+    { title: t('design'), skills: ['UI/UX Design', 'Photoshop', ] },
     {
       title: 'Soft Skills',
       skills: [
