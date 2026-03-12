@@ -5,3 +5,4 @@ export { default as iPhone } from '../assets/images/iPhone.jpg';
 export { default as totembo } from '../assets/images/totembo.jpg';
 export { default as zone } from '../assets/images/zone.jpg';
 export { default as photo} from '../assets/images/photo.jpg';
+export { default as about} from '../assets/images/about-me.jpg';

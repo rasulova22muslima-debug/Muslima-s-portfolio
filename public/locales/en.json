@@ -15,8 +15,6 @@
     "tools": "Tools",
     "design": "Design",
     "languages": "Languages",
-    "lang1": "Russian",
-    "lang2": "English",
     "skills-p1": "Teamwork",
     "skills-p2": "Communication",
     "skills-p3": "Problem Solving",
@@ -39,5 +37,6 @@
     "SocialMedia": "Social Media",
     "navigation": "Navigation",
     "loc2":"Tashkent, Uzbekistan",
-    "footerInfo": "Frontend developer and UI/UX designer creating beautiful and functional web applications."
+    "footerInfo": "Frontend developer and UI/UX developer creating beautiful and functional web applications.",
+    "project7": "Project About-me"
 }

@@ -7,7 +7,7 @@ import Projects from "./components/Projects/Projects";
 import Info from "./components/Info/Info";
 import Footer from "./components/Footer/Footer";
 
-import { goTrip, foot, Silver, iPhone, totembo, zone } from "./utilities/reExport";
+import { goTrip, foot, Silver, iPhone, totembo, zone, about } from "./utilities/reExport";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
@@ -28,10 +28,8 @@ const App = () => {
   ];
 
   const mySkills = [
-    { title: "Frontend", skills: ['React', 'TypeScript', 'JavaScript', 'CSS', 'SCSS'] },
-    { title: 'Backend', skills: ['Node.js',] },
+    { title: "Frontend", skills: ['React', 'Zustand', 'Redux Toolkitt', 'React Router Dom', 'Axios'] },
     { title: t('tools'), skills: ['Git', 'Figma', 'Vite', 'VS Code', 'Versel'] },
-    { title: t('design'), skills: ['UI/UX Design', 'Photoshop', ] },
     {
       title: 'Soft Skills',
       skills: [
@@ -42,7 +40,7 @@ const App = () => {
         t('skills-p5')  
       ]
     },
-    { title: t('languages'), skills: [t('lang1'), t('lang2')] },
+    { title: t('languages'), skills: ["JavaScript","TypeScript","HTML","SCSS","CSS"] },
   ];
 
   
@@ -94,6 +92,14 @@ const App = () => {
       tags: ["HTML", "CSS"],
       link: "https://rasulova22muslima-debug.github.io/totembo/",
       github: "https://github.com/rasulova22muslima-debug/totembo"
+    },
+    {
+      title: "About-me",
+      description: t("project7"),
+      image: about,
+      tags: ["React", "CSS", "JavaScript"],
+      link: "https://about-me-react-three.vercel.app/",
+      github: "https://github.com/rasulova22muslima-debug/about-me-react"
     },
   ];
 
