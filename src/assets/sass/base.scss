@@ -1,22 +1,20 @@
 @import './fonts.scss';
 
 :root {
-  // Базовая темная тема (как на скриншотах)
   --bg-page: #1a0b2e;    
   --bg-page2:#28153b  ;  
   --bg-card: #2a173b; 
   --bg-card2:#231235;    
-  --text-main: #F3E8FF;     // Основной светлый текст
-  --text-dim: #A89AB5;      // Приглушенный текст
-  --accent-1: #D696FF;      // Светло-фиолетовый (неон)
-  --accent-2: #FF6B97;      // Розовый акцент
+  --text-main: #F3E8FF;     
+  --text-dim: #A89AB5;    
+  --accent-1: #D696FF;      
+  --accent-2: #FF6B97;     
   --accent-gradient: linear-gradient(135deg, #B756FE 0%, #FF4F7E 100%);
   --border-color: rgba(255, 255, 255, 0.08);
   --header-bg: rgba(18, 11, 25, 0.85);
   --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
-// Если захотите оставить переключатель на светлую тему
 [data-theme='light'] {
   --bg-page: #fef8ff;
   --bg-page2: #fdf1ff;
@@ -37,7 +35,7 @@
   text-decoration: none;
   list-style: none;
   outline: none;
-  font-family: "DM Sans", "Open Sans", sans-serif; // Используйте шрифты из макета
+  font-family: "DM Sans", "Open Sans", sans-serif; 
 }
 
 html {
@@ -52,14 +50,13 @@ body {
 }
 
 .container {
-  max-width: 1200px; // Стандартная ширина для портфолио
+  max-width: 1200px; 
   width: 100%;
   height: 100%;
   margin: 0 auto;
   padding: 0 15px;
 }
 
-// Общий стиль для кнопок как на макете
 .btn-primary {
   background: var(--accent-gradient);
   color: #fff;
