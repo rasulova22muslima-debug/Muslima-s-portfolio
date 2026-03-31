@@ -114,7 +114,7 @@ const App = () => {
       description: t("project9"),
       image: shop,
       tags: ["React", "SCSS", "TypeScript"],
-      link: "",
+      link: "https://shop-lake-kappa.vercel.app/",
       github: "https://github.com/rasulova22muslima-debug/Shop"
     },
   ];
