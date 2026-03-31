@@ -7,7 +7,7 @@ import Projects from "./components/Projects/Projects";
 import Info from "./components/Info/Info";
 import Footer from "./components/Footer/Footer";
 
-import { goTrip, foot, Silver, iPhone, totembo, zone, about , weather} from "./utilities/reExport";
+import { goTrip, foot, Silver, iPhone, totembo, zone, about , weather, shop} from "./utilities/reExport";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
@@ -105,9 +105,17 @@ const App = () => {
       title: "Weather",
       description: t("project8"),
       image: weather,
-      tags: ["React", "CSS", "JavaScript"],
+      tags: ["React", "SCSS", "JavaScript"],
       link: "https://weather-react-six-delta.vercel.app/",
       github: "https://github.com/rasulova22muslima-debug/Weather-react"
+    },
+    {
+      title: "Shop",
+      description: t("project9"),
+      image: shop,
+      tags: ["React", "SCSS", "TypeScript"],
+      link: "",
+      github: "https://github.com/rasulova22muslima-debug/Shop"
     },
   ];
 
